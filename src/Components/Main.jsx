@@ -5,13 +5,13 @@ import Acc from './Acc';
 
 export const Main = () => {
   const days = [
-    'Monday',
     'Tuesday',
     'Wednesday',
     'Thursday',
     'Friday',
     'Saturday',
     'Sunday',
+    'Monday',
   ];
 
   const [day, setDay] = useState('');
