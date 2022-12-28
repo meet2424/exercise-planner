@@ -30,13 +30,19 @@ export const Main = () => {
             })}
           </Select>
         </div>
-        <div className="px-2 ">
-          {data.map((data) => {
-            if (data.days.includes(day)) {
-              return <Acc key={data.head} data={data} />;
-            }
-          })}
-        </div>
+        {day === 'Monday' ? (
+          <div className="text-center text-lg mt-8 font-inriaSans text-pup tracking-wider">
+            Holiday🥳🥳
+          </div>
+        ) : (
+          <div className="px-2 ">
+            {data.map((data) => {
+              if (data.days.includes(day)) {
+                return <Acc key={data.head} data={data} />;
+              }
+            })}
+          </div>
+        )}
       </div>
     </>
   );
